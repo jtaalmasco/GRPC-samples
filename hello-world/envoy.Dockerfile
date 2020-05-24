@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM envoyproxy/envoy:latest
+FROM envoyproxy/envoy:v1.9.0
 
-COPY ./envoy.yaml /etc/envoy/envoy.yaml
+COPY envoy.yaml /etc/envoy/envoy.yaml
 
 CMD /usr/local/bin/envoy -c /etc/envoy/envoy.yaml
